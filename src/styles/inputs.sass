@@ -1,0 +1,97 @@
+$inputs-vertical-padding: 10px
+
+input, button, select, textarea
+  display: block
+
+  &._wa,
+  &._zeroed
+    flex: unset !important
+    flex-basis: fit-content
+
+  &._wa
+    width: auto
+
+  &._zeroed
+    padding: 0
+    background: transparent
+    appearance: none
+    width: auto
+    min-width: 0
+    border: none
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+button
+  width: 100%
+  font: 1em -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  padding: $inputs-vertical-padding 15px
+  border-radius: 5px
+  transition: .12s
+  border: 1px solid var(--accent-color)
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+  min-width: 200px
+
+  &:focus
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px
+
+  &::placeholder
+    color: #9E9E9E
+    transition: .21s
+
+  &:focus::placeholder
+    transform: translateX(10px)
+    opacity: 0
+
+button
+  display: flex
+  align-items: center
+  gap: 10px
+  background: var(--accent-color)
+  color: #fff
+  cursor: pointer
+  font-weight: 500
+  white-space: nowrap
+
+  &:disabled
+    opacity: .8
+    cursor: not-allowed
+
+  &:hover:not(:disabled)
+    opacity: .9
+
+  & > svg
+    flex-shrink: 0
+    transition: .12s
+
+  &:not(._zeroed) > svg
+    fill: #fff
+
+  &._zeroed > svg
+    width: calc(1em + #{$inputs-vertical-padding} * 2)
+    height: calc(1em + #{$inputs-vertical-padding} * 2)
+
+  &._secondary
+    background: #424242
+
+.label
+  width: 100%
+  flex-basis: available
+  font-weight: 500
+  margin-bottom: -10px
+  margin-top: 10px
+
+.form-separator
+  display: flex
+  gap: 10px
+  flex-wrap: wrap
+
+  &:not(:first-child)
+    margin-top: 10px
+
+  .form-separator,
+  input, button
+    flex: 1

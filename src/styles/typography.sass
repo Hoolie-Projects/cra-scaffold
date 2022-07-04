@@ -1,0 +1,23 @@
+h1, h2, h3, h4, h5, h6,
+p, ol, ul
+  user-select: text
+
+  &:not(:first-child)
+    margin-top: 10px
+
+p
+  line-height: 1.5em
+
+ol, ul
+  padding: 0
+  list-style-position: inside
+
+  li:not(:first-child):not(:last-child)
+    margin: 10px 0
+
+hr
+  border: none
+  margin: 15px
+  width: 100%
+  height: 1px
+  background: #E0E0E0
