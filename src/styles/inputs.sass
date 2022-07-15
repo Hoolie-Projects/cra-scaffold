@@ -35,6 +35,9 @@ input[type="password"],
 input[type="email"]
   min-width: 200px
 
+  &._errored
+    border-color: #f00
+
   &:focus
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px
 
@@ -70,9 +73,8 @@ button
   &:not(._zeroed) > svg
     fill: #fff
 
-  &._zeroed > svg
-    width: calc(1em + #{$inputs-vertical-padding} * 2)
-    height: calc(1em + #{$inputs-vertical-padding} * 2)
+  &._zeroed
+    color: #000
 
   &._secondary
     background: #424242
@@ -84,6 +86,13 @@ button
   margin-bottom: -10px
   margin-top: 10px
 
+.input-error-message
+  width: 100%
+  margin-top: -5px
+  flex-basis: available
+  font-size: 10pt
+  color: #f00
+
 .form-separator
   display: flex
   gap: 10px
@@ -91,6 +100,9 @@ button
 
   &:not(:first-child)
     margin-top: 10px
+
+  &.__submit
+    margin-top: 20px
 
   .form-separator,
   input, button

@@ -68,24 +68,31 @@ $mobile-breakpoint: 820px
   .mobile-row
     display: flex
     flex-direction: column
-    gap: 10px
-    padding: 20px 12px
+    padding: 0 12px
     background: #fff
 
     @media(min-width: $mobile-breakpoint)
       display: none
 
     &:nth-child(odd)
-      background: #FAFAFA
+      background: #F5F5F5
 
     .cell
       display: flex
       align-items: center
+      justify-content: space-between
       flex-wrap: wrap
       gap: 5px
+      padding: 10px 0
+
+      &:not(:last-child)
+        border-bottom: 1px dotted #E0E0E0
 
       .header
         font-weight: bold
 
         &::after
           content: ':'
+
+      .data
+        text-align: right

@@ -45,6 +45,7 @@ export default function Popup(props: Props)
         ref={ref1} className="Popup" style={{
         '--animate-duration': `${duration}ms`
       } as any}
+        onClick={({target, currentTarget}) => target === currentTarget && close()}
       >
 
         <CSSTransition
