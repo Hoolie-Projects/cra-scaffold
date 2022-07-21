@@ -24,7 +24,7 @@ export default function FormInput(props: {
         />
         {props.isErrored ? (
           <div className="input-error-message">
-            Поле "{props.label}" заполнено не правильно"
+            Поле "{props.label}" заполнено не правильно
           </div>
         ) : null}
       </div>
