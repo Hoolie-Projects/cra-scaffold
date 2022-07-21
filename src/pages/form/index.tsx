@@ -50,14 +50,25 @@ export default function FormPage()
         <form onSubmit={form.handleSubmit(onFormSubmit)}>
 
           <FormInput
-            label="Ваше имя" name="firstName" registerFunc={form.register} isErrored={!!form.formState.errors.firstName}
+            label="Ваше имя"
+            name="firstName"
+            type="text"
+            registerFunc={form.register}
+            isErrored={!!form.formState.errors.firstName}
           />
           <FormInput
-            label="Ваша фамилия" name="lastName" registerFunc={form.register}
+            label="Ваша фамилия"
+            name="lastName"
+            type="text"
+            registerFunc={form.register}
             isErrored={!!form.formState.errors.lastName}
           />
           <FormInput
-            label="Пароль" name="password" registerFunc={form.register} isErrored={!!form.formState.errors.password}
+            label="Пароль"
+            name="password"
+            type="password"
+            registerFunc={form.register}
+            isErrored={!!form.formState.errors.password}
           />
 
           <div className="form-separator __submit">
